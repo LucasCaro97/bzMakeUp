@@ -1,0 +1,74 @@
+#productos-container{
+    display : flex;
+    justify-content: center;
+    margin-top: 1rem;
+    padding: 15px;
+}
+
+#totales{
+    padding: 15px;
+}
+
+.imagenProducto{
+    height : 100px;
+    aspect-ratio : 1.0
+}
+
+.nombreProducto{
+    width: 300px;
+    text-align : center;
+}
+
+.precioProducto{
+    width : 85px;
+}
+
+.cantidadProducto{
+    width : 100px;
+}
+
+
+
+#totales, #carrito-vacio{
+    text-align: center;
+}
+
+.escondido{
+    display : none;
+}
+
+.infoContacto{
+    margin : auto;
+}
+
+th, td{
+    text-align : center;
+}
+
+@media screen and (max-width:800px){
+.imagenProducto{
+    height : 50px;
+    aspect-ratio : 1.0
+}
+
+th{
+    font-size : smaller;
+}
+
+.nombreProducto{
+    width : 100px;
+    font-size : smaller;
+}
+
+.precioProducto{
+    width : 70px;
+}
+
+.total-producto{
+    width : 70px;
+}
+
+
+
+
+}

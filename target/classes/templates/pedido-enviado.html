@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+    <title>BZ Make Up</title>
+</head>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">LOGO</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" th:href="@{/}">Pagina Principal</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Empresa</a>
+                    </li>
+                </ul>
+
+                <a class="btn btn-dark me-2" th:href="@{/auth/login}">Iniciar sesion</a>
+                <!--- <a class="btn btn-dark" th:href="@{/auth/sign-up}">Registrate</a> -->
+            </div>
+        </div>
+    </nav>
+</header>
+
+<body>
+<div class="container text-center mt-5">
+    <img th:src="@{/img/error.png}" alt="error" width="600">
+    <h1 class="mt-3">Pedido enviado con exito!</h1>
+    <p >Aguarda unos momentos hasta que nos contactemos para darte informacion sobre como sigue la compra! O contactate con nosotros haciendo<a href="https://api.whatsapp.com/5493751449412">clic aqui</a> </p>
+    <a th:href="@{/}" class="btn btn-primary">Pagina Principal</a>
+</div>
+
+
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+</body>
+
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BZ Make Up</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9cf5630080.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/css/estiloslandingpage.css}">
+</head>
+
+<body>
+
+<header class="hero">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" th:href="@{/auth/home}">Pagina Principal</a></li>
+                    <li class="nav-item" sec:authorize="hasAnyRole('ADMIN')"><a class="nav-link active" th:href="@{/categorias}">Categorias</a></li>
+                    <li class="nav-item"><a class="nav-link active" th:href="@{/productos}">Productos</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">Empresa</a></li>
+                    <li class="nav-item" sec:authorize="hasAnyRole('ADMIN', 'ATENCION')">
+                        <a th:href="@{/clientes}" class="nav-link text-white">Clientes</a>
+                    </li>
+                    <li class="nav-item" sec:authorize="hasAnyRole('ADMIN', 'ATENCION', 'OPERADOR' , 'DISEÑADOR')">
+                        <a th:href="@{/pedidos}"  class="nav-link text-white">Pedidos</a>
+                    </li>
+                    <!---
+                    <li class="nav-item" sec:authorize="hasRole('CLIENTE')">
+                        <a th:href="@{/pedidos/clientes}"  class="nav-link text-white">Mis Pedidos</a>
+                    </li>
+                    --->
+                    <li class="nav-item" sec:authorize="hasAnyRole('ADMIN')">
+                        <a th:href="@{/estadospedidos}"  class="nav-link text-white">Estados Ped</a>
+                    </li>
+                    <li class="nav-item" sec:authorize="hasRole('ADMIN')">
+                        <a th:href="@{/usuarios}"  class="nav-link text-white">Usuarios</a>
+                    </li>
+                    <li class="nav-item" sec:authorize="hasRole('ADMIN')">
+                        <a th:href="@{/roles}"  class="nav-link text-white">Roles</a>
+                    </li>
+                </ul>
+                <a class="btn btn-dark" th:href="@{/logout}" >Cerrar Sesion</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="textos-hero">
+        <h1>Bienvenido a BZ Make Up!</h1>
+        <p>Tienda virtual de maquillaje y cosmeticos</p>
+        <a class="btn mb-2" href="https://wa.me/5493751444031"><i class="fa-brands fa-whatsapp"></i> Contacto</a>
+    </div>
+    <div class="svg-hero" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+                                                                        style="height: 100%; width: 100%;">
+        <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+              style="stroke: none; fill: #fff;"></path>
+    </svg></div>
+</header>
+
+
+<section class="wave-contenedor website">
+    <img id="imgProducto" src="https://http2.mlstatic.com/D_NQ_NP_732502-MLA70151976798_062023-O.webp" alt="">
+    <div class="contenedor-textos-main">
+        <h2 class="titulo left">Productos</h2>
+        <p class="parrafo">Accede a nuestro catalogo de productos!</p>
+        <a th:href="@{/productos}" class="cta">Haz clic aqui</a>
+    </div>
+</section>
+
+<section class="info">
+    <div class="contenedor">
+        <h2 class="titulo left">Como hacer un pedido</h2>
+        <ol>
+            <li>Muy facil! Hace <a th:href="@{/productos}">clic aqui!</a> para acceder al catalogo de productos. </li>
+            <li>Hace clic en el boton "Añadir" para agregar al carrito los productos que te interesan</li>
+            <li>Cuando terminas, hace clic en el icono del carrito que se encuentra en la esquina superior derecha</li>
+            <li>Verifica que este todo lo que queres, completa el campo nombre, telefono y listo!</li>
+            <li>Aguarda unos instantes a que nos contactemos con vos para atenderte y coordinar la entrega y el pago de tus productos!</li>
+        </ol>
+        <a class="btn btn-dark" th:href="@{/productos}"> Hacer Pedido! </a>
+    </div>
+</section>
+
+<section class="cards contenedor">
+    <h2 class="titulo">Nuestros Servicios</h2>
+    <div class="content-cards">
+        <div class="card" style="width: 18rem;">
+            <img src="https://previews.123rf.com/images/belchonock/belchonock1711/belchonock171101715/90496402-concepto-de-venta-de-maquillaje-y-belleza-cosm%C3%A9ticos-en-el-fondo-blanco.jpg?fj=1" class="card-img-top" alt="Souvenir personalizado">
+            <div class="card-body">
+                <h4 class="tituloCardHome">Venta al por mayor y menor</h4>
+                <p class="card-text">Maquillaje profesional, cruelty free, nacionales e internacionales</p>
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <img src="https://guiaojoalpiojo.com/wp-content/uploads/2022/06/Captura-de-Pantalla-2022-08-02-a-las-20.21.46.png" class="card-img-top" alt="Imagen trofeo">
+            <div class="card-body">
+                <h4 class="tituloCardHome">Stand de gliter para eventos</h4>
+                <p class="card-text">Servicio de stand de glitter para todo tipo de eventos</p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="https://www.bettinafrumboli.com/wp-content/uploads/2022/06/dedicarse-maquillaje-profesional-01-1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h4 class="tituloCardHome">Maquillaje profesional</h4>
+                <p class="card-text">Maquillaje social, novias, quinceañeras</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--<section class="ubicacion">-->
+<!--    <h2 class="titulo">Donde nos ubicamos</h2>-->
+<!--    <div class="content-cards">-->
+<!--        <div class="contenedor-mapas">-->
+<!--            <h5>Local Eldorado</h5>-->
+<!--            <iframe class="mapas" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3573.463730291725!2d-54.5849268853081!3d-26.408507778723163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94f76f017be9226b%3A0x199cd4211ea0f092!2sArtesanias%20Tierra%20Colorada!5e0!3m2!1ses-419!2sar!4v1673294594646!5m2!1ses-419!2sar" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>-->
+<!--        </div>-->
+
+
+<!--    </div>-->
+<!--</section>-->
+
+
+
+<footer id="contacto">
+    <div class="contenedor">
+        <h2 class="titulo">Si aun te quedan dudas, dejanos tu mensaje</h2>
+        <form th:action="@{/email/enviarCorreoHomeContact}" class="form" method="post">
+            <input class="input"  type="text" name="nombreContacto" id="nombreContacto" placeholder="Nombre">
+            <input class="input"  type="email" name="emailContacto" id="emailContacto" placeholder="Email">
+            <textarea  class="input" name="mensajeContacto" id="mensajeContacto" cols="30" rows="10" placeholder="Mensaje"></textarea>
+            <input class="input"  type="submit" value="Enviar">
+        </form>
+    </div>
+</footer>
+
+<div class="bg-dark fixed-bottom text-center text-white py-3" >
+    <span th:text="${session.id != null} ? |${session.username} - ${session.rol}| : 'BZ MAKEUP'"></span>
+</div>
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+</body>
+
+</html>

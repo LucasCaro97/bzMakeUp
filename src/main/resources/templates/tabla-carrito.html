@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BZ Make Up</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9cf5630080.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/css/estilostablas.css}">
+    <link rel="stylesheet" th:href="@{/css/administrarCarrito.css}">
+</head>
+<body>
+<header class="hero">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation" id="collapseMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" th:href="@{${#authorization.expression('isAuthenticated()')} ? '/auth/home' : '/'}">Pagina
+                        Principal</a></li>
+                    <li class="nav-item"><a class="nav-link active" th:href="@{/productos}">Productos</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">Empresa</a></li>
+                    <li class="nav-item" sec:authorize="hasRole('CLIENTE')">
+                        <a href="#" class="nav-link text-white">Realizar Pedido</a>
+                    </li>
+                    <li class="nav-item" sec:authorize="hasAnyRole('ADMIN', 'ATENCION')">
+                        <a th:href="@{/clientes}" class="nav-link text-white">Clientes</a>
+                    </li>
+                    <li class="nav-item" sec:authorize="hasAnyRole('ADMIN', 'ATENCION', 'OPERADOR' , 'DISEÑADOR')">
+                        <a th:href="@{/pedidos}" class="nav-link text-white">Pedidos</a>
+                    </li>
+                    <li class="nav-item" sec:authorize="hasAnyRole('ADMIN')">
+                        <a th:href="@{/estadospedidos}" class="nav-link text-white">Estados Ped</a>
+                    </li>
+                    <li class="nav-item" sec:authorize="hasRole('ADMIN')">
+                        <a th:href="@{/usuarios}" class="nav-link text-white">Usuarios</a>
+                    </li>
+                    <li class="nav-item" sec:authorize="hasRole('ADMIN')">
+                        <a th:href="@{/roles}" class="nav-link text-white">Roles</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+<main>
+<p id="carrito-vacio">No hay productos en el carrito! <a href="/productos">Agregar Productos</a></p>
+<section id="productos-container"></section>
+
+    <section id="totales">
+    <p>Total unidades: <span id="unidades">0</span></p>
+    <p>Total precio: $<span id="precio">0</span></p>
+
+<!--        col-sm-12 col-lg-3-->
+    <div class="col-sm-10 col-lg-2 infoContacto mb-2">
+    <label class="form-label" for="nombre">Nombre Cliente:</label>
+    <input class="form-control" id="nombre">
+    </div>
+    <div class="col-sm-10 col-lg-2 infoContacto mb-2">
+        <label class="form-label" for="correoElectronico">Correo Electronico:</label>
+        <input class="form-control" id="correoElectronico">
+    </div>
+
+    <button class="btn btn-primary" id="realizarPedido">Realizar Pedido</button>
+    <button class="btn btn-primary" id="reiniciar">Reiniciar carrito</button>
+</section>
+</main>
+
+
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+<script th:src="@{/js/administrarCarrito.js}"></script>
+<script th:if="${#httpServletRequest.getRemoteUser() != null}" th:src="@{/js/darMargenAlNav.js}"></script>
+<script th:unless="${#httpServletRequest.getRemoteUser() != null}" th:src="@{/js/darMargenAlNavSecondary.js}"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+:root{
+--color-acento: #ee6130;
+--color-acento-claro: #ee613033;
+--color-texto: black;
+
+}
+
+a{
+    text-decoration: none;
+    color: var(--color-texto)
+}
+
+a:hover:not(#cart){
+    color: var(--color-acento)
+}
+
+#divCarrito{
+    position: fixed;
+    display: inline-block;
+    right: 10%;
+     z-index: 1000;
+}
+
+#cuentaCarrito{
+    background-color: var(--color-acento);
+    border-radius: 100%;
+    display: inline-block;
+    width: 20px;
+    line-heigth_ 20px;
+    aspect-ratio: 1;
+    text-align: center;
+}
+
+
+#divCardsPadre{
+    height : 450px;
+}
+
+
+#divCards{
+    height : 95%;
+}
+
+
+#imgCarrito{
+    height : 40px;
+}
+
+@media screen and (max-width:800px){
+
+
+}
