@@ -1,5 +1,6 @@
 com\gestion\fibrolaser\entidades\Pagos.class
 com\gestion\fibrolaser\controladores\RolController.class
+com\gestion\fibrolaser\entidades\DataInicializador.class
 com\gestion\fibrolaser\repositorios\ProductoRepository.class
 com\gestion\fibrolaser\entidades\Rol.class
 com\gestion\fibrolaser\controladores\PedidoControlador.class
@@ -10,6 +11,7 @@ com\gestion\fibrolaser\servicios\EmailService.class
 com\gestion\fibrolaser\repositorios\AsistenciaRepository.class
 com\gestion\fibrolaser\seguridad\AppSecurity.class
 com\gestion\fibrolaser\DTO\PedidoDTO.class
+com\gestion\fibrolaser\MakeUpApplication.class
 com\gestion\fibrolaser\controladores\PagosControlador.class
 com\gestion\fibrolaser\entidades\Asistencia.class
 com\gestion\fibrolaser\configuracion\AppConfiguration.class
@@ -22,7 +24,6 @@ com\gestion\fibrolaser\repositorios\PedidoRepository.class
 com\gestion\fibrolaser\entidades\Productos.class
 com\gestion\fibrolaser\repositorios\RolRepository.class
 com\gestion\fibrolaser\entidades\PedidoDetalle.class
-com\gestion\fibrolaser\FibrolaserApplication.class
 com\gestion\fibrolaser\controladores\CategoriaController.class
 com\gestion\fibrolaser\controladores\AsistenciaControlador.class
 com\gestion\fibrolaser\servicios\PagosServicio.class

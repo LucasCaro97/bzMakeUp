@@ -7,12 +7,12 @@ C:\Users\54375\Desktop\bzMakeUp\src\main\java\com\gestion\fibrolaser\controlador
 C:\Users\54375\Desktop\bzMakeUp\src\main\java\com\gestion\fibrolaser\entidades\PedidoDetalle.java
 C:\Users\54375\Desktop\bzMakeUp\src\main\java\com\gestion\fibrolaser\controladores\CarritoControlador.java
 C:\Users\54375\Desktop\bzMakeUp\src\main\java\com\gestion\fibrolaser\controladores\AuthController.java
+C:\Users\54375\Desktop\bzMakeUp\src\main\java\com\gestion\fibrolaser\MakeUpApplication.java
 C:\Users\54375\Desktop\bzMakeUp\src\main\java\com\gestion\fibrolaser\repositorios\ClienteRepository.java
 C:\Users\54375\Desktop\bzMakeUp\src\main\java\com\gestion\fibrolaser\servicios\FormaPagoServicio.java
 C:\Users\54375\Desktop\bzMakeUp\src\main\java\com\gestion\fibrolaser\entidades\ConceptoPago.java
 C:\Users\54375\Desktop\bzMakeUp\src\main\java\com\gestion\fibrolaser\servicios\AsistenciaServicio.java
 C:\Users\54375\Desktop\bzMakeUp\src\main\java\com\gestion\fibrolaser\repositorios\PedidoDetalleRepository.java
-C:\Users\54375\Desktop\bzMakeUp\src\main\java\com\gestion\fibrolaser\FibrolaserApplication.java
 C:\Users\54375\Desktop\bzMakeUp\src\main\java\com\gestion\fibrolaser\servicios\ImagenService.java
 C:\Users\54375\Desktop\bzMakeUp\src\main\java\com\gestion\fibrolaser\controladores\PrincipalController.java
 C:\Users\54375\Desktop\bzMakeUp\src\main\java\com\gestion\fibrolaser\repositorios\FormaPagoRepository.java
@@ -26,6 +26,7 @@ C:\Users\54375\Desktop\bzMakeUp\src\main\java\com\gestion\fibrolaser\servicios\P
 C:\Users\54375\Desktop\bzMakeUp\src\main\java\com\gestion\fibrolaser\servicios\ClienteServicio.java
 C:\Users\54375\Desktop\bzMakeUp\src\main\java\com\gestion\fibrolaser\controladores\PedidoControlador.java
 C:\Users\54375\Desktop\bzMakeUp\src\main\java\com\gestion\fibrolaser\repositorios\PagosRepository.java
+C:\Users\54375\Desktop\bzMakeUp\src\main\java\com\gestion\fibrolaser\entidades\DataInicializador.java
 C:\Users\54375\Desktop\bzMakeUp\src\main\java\com\gestion\fibrolaser\configuracion\ImgConfig.java
 C:\Users\54375\Desktop\bzMakeUp\src\main\java\com\gestion\fibrolaser\DTO\PedidoDTO.java
 C:\Users\54375\Desktop\bzMakeUp\src\main\java\com\gestion\fibrolaser\entidades\FormaPago.java
