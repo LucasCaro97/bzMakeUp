@@ -19,7 +19,7 @@ public class Usuario {
     private Integer id;
     @Column(name = "nombre_usuario", unique = true, nullable = false)
     private String username;
-    @Column(name = "contraseña_usuario", nullable = false)
+    @Column(name = "contrasena_usuario", nullable = false)
     private String password;
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "fk_rol", nullable = false)
